@@ -36,7 +36,7 @@ function formSubmission(e) {
 
   new Customer(item, quantity, fullName, streetAddress, city, fullState, zip, phoneNumber, creditCard);
 
-  localStorage.setItem('unFilledOrder', JSON.stringify(allOrders));
+  localStorage.setItem(allOrders[0].phoneNumber, JSON.stringify(allOrders));
   allOrders = [];
 
   event.target.quantity.value = null;

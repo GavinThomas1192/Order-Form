@@ -41,10 +41,8 @@ function remove(event) {
   for (var i = 0; i < storedCustomers.length; i++)
     if (event.target.id === storedCustomers[i].phoneNumber) {
       var deleteDiv = document.getElementById(event.target.id);
-      localStorage.removeItem(storedCustomers[0].deleteDiv);
       deleteDiv.innerHTML = '';
-      // var storedCustomers = JSON.parse(localStorage.getItem('unFilledOrder'));
-
+      localStorage.removeItem(storedCustomers[i].phoneNumber);
 
     }
 }
