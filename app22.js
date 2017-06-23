@@ -42,7 +42,7 @@ function remove(event) {
     if (event.target.id === storedCustomers[i].phoneNumber) {
       var deleteDiv = document.getElementById(event.target.id);
       deleteDiv.innerHTML = '';
-      localStorage.removeItem(storedCustomers[i].phoneNumber);
+      localStorage.removeItem(storedCustomers[i]);
 
     }
 }

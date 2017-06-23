@@ -37,12 +37,12 @@ function formSubmission(e) {
 
   if (event.target.creditCard.value.length < 16) {
     return alert('Please enter valid 16-digit credit card number!');
-  
+
   }
 
   new Customer(item, quantity, fullName, streetAddress, city, fullState, zip, phoneNumber, creditCard);
 
-  localStorage.setItem(allOrders[0].phoneNumber, JSON.stringify(allOrders));
+  localStorage.setItem('unFilledOrder', JSON.stringify(allOrders));
   allOrders = [];
 
   event.target.quantity.value = null;
