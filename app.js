@@ -30,8 +30,14 @@ function formSubmission(e) {
   var zip = event.target.zip.value;
   var phoneNumber = event.target.phoneNumber.value;
   var creditCard = event.target.creditCard.value;
-  if (!creditCard || !quantity || !fullName || !streetAddress || !city || !fullState || !zip || !phoneNumber) {
-    return alert('All Fields Must Be Complete!');
+
+  if (!event.target.quantity.value || !event.target.fullName.value || !event.target.streetAddress.value || !event.target.city.value || !event.target.fullState.value || !event.target.fullState.value || !event.target.phoneNumber.value || !event.target.zip.value) {
+    return alert('Fields cannot be empty!');
+  }
+
+  if (event.target.creditCard.value.length < 16) {
+    return alert('Please enter valid 16-digit credit card number!');
+  
   }
 
   new Customer(item, quantity, fullName, streetAddress, city, fullState, zip, phoneNumber, creditCard);
