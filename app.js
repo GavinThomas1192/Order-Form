@@ -30,6 +30,10 @@ function formSubmission(e) {
   var zip = event.target.zip.value;
   var phoneNumber = event.target.phoneNumber.value;
   var creditCard = event.target.creditCard.value;
+  if (!creditCard || !quantity || !fullName || !streetAddress || !city || !fullState || !zip || !phoneNumber) {
+    return alert('All Fields Must Be Complete!');
+  }
+
   new Customer(item, quantity, fullName, streetAddress, city, fullState, zip, phoneNumber, creditCard);
 
   localStorage.setItem('unFilledOrder', JSON.stringify(allOrders));
@@ -42,6 +46,7 @@ function formSubmission(e) {
   event.target.city.value = null;
   event.target.fullState.value = null;
   event.target.zip.value = null;
+
 }
 
 ordersInput.addEventListener('submit', formSubmission);

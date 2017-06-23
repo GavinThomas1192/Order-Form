@@ -41,7 +41,10 @@ function remove(event) {
   for (var i = 0; i < storedCustomers.length; i++)
     if (event.target.id === storedCustomers[i].phoneNumber) {
       var deleteDiv = document.getElementById(event.target.id);
+      localStorage.removeItem(event.target.id);
       deleteDiv.innerHTML = '';
+
+
     }
 }
 render();
