@@ -3,13 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <link rel="stylesheet" href="style.css">
+  <title>BUSMALL Order Form</title>
 </head>
 
 <body>
   <form id="buyProduct">
     <fieldset>
-      <legend>You're going to love your new product</legend>
+      <legend>BUSMALL ORDERS</legend>
 
       <label for="whichProduct">Select an Item:</label>
       <select id="itemDropDown">
@@ -35,32 +36,32 @@
       <option value="wine-glass">Wine-glass</option>
       </select>
 
-      <label for="quantity">Quantity</label>
-      <input name="quantity" type="number" />
+      <br><label for="quantity">Item Quantity</label>
+      <input name="quantity" type="number"/>
 
-      <label for="fullName">Full Name</label>
+      <br><label for="fullName">Full Name</label>
       <input name="fullName" type="text" />
 
-      <label for="streetAddress">Street Address</label>
+      <br><label for="streetAddress">Street Address</label>
       <input name="streetAddress" type="text" />
 
-      <label for="city">City</label>
+      <br><label for="city">City</label>
       <input name="city" type="text" />
 
-      <label for="fullState">Full State. EX. "Idaho"</label>
+      <br><label for="fullState">State</label>
       <input name="fullState" type="text" />
 
-      <label for="zip">Zip Code EX. 98499.</label>
+      <br><label for="zip">ZIP Code</label>
       <input name="zip" type="number" />
 
-      <label for="phoneNumber">Phone Number with area code. EX. (555) 555-5555</label>
-      <input name="phoneNumber" type="text" />
+      <br><label for="phoneNumber">Phone Number</label>
+      <input name="phoneNumber" type="text" placeholder="(555) 555-5555"/>
 
-      <label for="creditCard">16 Digit Credit Card Number.</label>
-      <input name="creditCard" type="number" />
+      <br><label for="creditCard">Credit Card #</label>
+      <input name="creditCard" type="number" placeholder="xxxx-xxxx-xxxx-xxxx"/>
 
 
-      <button type="submit">Confirm Order</button>
+      <br><button type="submit">Confirm Order</button>
 
     </fieldset>
   </form>
