@@ -15,7 +15,7 @@ function render() {
     var p4El = document.createElement('p');
     var p5El = document.createElement('p');
     pEl.textContent = 'Name: ' + storedCustomers[i].fullName;
-    p2El.textContent = 'Address: ' + storedCustomers[i].address;
+    p2El.textContent = 'Address: ' + storedCustomers[i].streetAddress + ' , ' + storedCustomers[i].city + ' , ' + storedCustomers[i].fullState + ' , ' + storedCustomers[i].zip;
     p3El.textContent = 'Phone Number: ' + storedCustomers[i].phoneNumber;
     p4El.textContent = 'Item Type: ' + storedCustomers[i].item;
     p5El.textContent = 'Credit Card Number: ' + storedCustomers[i].creditCard;
