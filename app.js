@@ -37,11 +37,13 @@ function formSubmission(e) {
 
   if (event.target.creditCard.value.length < 16) {
     return alert('Please enter valid 16-digit credit card number!');
+  
   }
 
   new Customer(item, quantity, fullName, streetAddress, city, fullState, zip, phoneNumber, creditCard);
 
-  localStorage.setItem('unFilledOrder', JSON.stringify(allOrders));
+  localStorage.setItem(allOrders[0].phoneNumber, JSON.stringify(allOrders));
+  allOrders = [];
 
   event.target.quantity.value = null;
   event.target.fullName.value = null;
@@ -51,10 +53,11 @@ function formSubmission(e) {
   event.target.city.value = null;
   event.target.fullState.value = null;
   event.target.zip.value = null;
+
 }
 
 ordersInput.addEventListener('submit', formSubmission);
 
 //****************
-var storedCustomers = JSON.parse(localStorage.getItem('unFilledOrder'));
+// var storedCustomers = JSON.parse(localStorage.getItem('unFilledOrder'));
 var unOrderOne = document.getElementById('unfilledOrderOne');
