@@ -37,6 +37,7 @@ function formSubmission(e) {
   new Customer(item, quantity, fullName, streetAddress, city, fullState, zip, phoneNumber, creditCard);
 
   localStorage.setItem('unFilledOrder', JSON.stringify(allOrders));
+  allOrders = [];
 
   event.target.quantity.value = null;
   event.target.fullName.value = null;
@@ -52,5 +53,5 @@ function formSubmission(e) {
 ordersInput.addEventListener('submit', formSubmission);
 
 //****************
-var storedCustomers = JSON.parse(localStorage.getItem('unFilledOrder'));
+// var storedCustomers = JSON.parse(localStorage.getItem('unFilledOrder'));
 var unOrderOne = document.getElementById('unfilledOrderOne');
